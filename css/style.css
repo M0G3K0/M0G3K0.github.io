@@ -92,7 +92,7 @@ img {
 
 header{
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   height: 80px;
   width: 100%;
   top: 0;
