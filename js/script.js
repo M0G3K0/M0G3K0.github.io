@@ -108,3 +108,53 @@ function tabSwitch(e) {
 }
 
 }
+
+
+// grid
+
+window.addEventListener('load', function() {
+  var grids = document.getElementsByClassName('grid')[0];
+  grids.style.visibility = 'visible';
+  grids.style.opacity = '1';
+
+  var grid = new Muuri('.grid', {
+    showDuration: 600,
+    showEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+    hideDuration: 600,
+    hideEasing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+    layoutOnResize: true,
+    layoutDuration: 600,
+  });
+
+  var filterRadios = document.querySelectorAll('[name="filter"]'),
+      filterAttr = 'data-category',
+      filterFieldValue;
+
+  // Set initial active filter
+  filterFieldValue = getCheckedRadioValue(filterRadios);
+
+  // Filter radio buttons event binding
+  filterRadios.forEach(function(radio) {
+    radio.addEventListener('change', filter);
+  });
+
+  // Filtering
+  function filter() {
+    filterFieldValue = getCheckedRadioValue(filterRadios);
+    grid.filter(function (item) {
+      var element = item.getElement(),
+          isFilterMatch = !filterFieldValue ? true : (element.getAttribute(filterAttr) || '') === filterFieldValue;
+      return isFilterMatch;
+    });
+  }
+
+  // Helper function to get the value of the checked radio button
+  function getCheckedRadioValue(radios) {
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        return radios[i].value;
+      }
+    }
+    return '';
+  }
+});
