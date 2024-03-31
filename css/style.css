@@ -1234,9 +1234,6 @@ input[type="radio"]{
   color: var(--color-bg);
 }
 
-.lightboxOverlay, .lightbox{
-  transition: unset;
-}
 
 .tag{
   border-radius: 9999px;
@@ -1277,3 +1274,7 @@ input[type="radio"]{
   max-width: 100%;
   justify-content: flex-start;
 }
+
+
+/* Light box */
+

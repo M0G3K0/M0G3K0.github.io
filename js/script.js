@@ -158,3 +158,34 @@ window.addEventListener('load', function() {
     return '';
   }
 });
+
+
+//lightbox
+
+var lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe,
+        spacing: 0.1,
+    });
+lightbox.init();
+
+document.addEventListener('DOMContentLoaded', function () {
+  const galleries = gallery.querySelectorAll('a');
+  galleries.forEach((el) => {
+      loadImage(el.href).then(img => {
+          el.setAttribute('data-pswp-width', img.naturalWidth);
+          el.setAttribute('data-pswp-height', img.naturalHeight);
+          el.firstElementChild.removeAttribute('style');
+      });
+  });
+});
+
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = (e) => reject(e);
+      img.src = src;
+  });
+}
