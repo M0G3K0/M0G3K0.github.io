@@ -23,6 +23,12 @@ body {
   color: var(--color-body);
   overflow-y: scroll;
 }
+br{
+  display: block;
+  content: "";
+  margin: 10px 0;
+}
+
  main {
   padding-top: 5rem;
 }
@@ -82,8 +88,8 @@ img {
   display: flex;
   gap: 25px;
   justify-content: center;
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 1100px;
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
@@ -135,7 +141,7 @@ header{
   font-weight: 400;
   height: auto;
   letter-spacing: 0.04em;
-  line-height: 2;
+  line-height: 1.5;
   margin: 0px 0px 0px 4px;
   text-align: left;
   width: 660px;
@@ -341,15 +347,12 @@ li[nav-menu]{
   z-index: 2;
   width: fit-content;
   height: fit-content;
-  top: 20px;
-  left: 28px;
+  top: 10px;
+  left: 3px;
   padding: 8px 15px 12px 17px;
   border-radius: 9999px;
 }
 
-.TOP-link-container:hover{
-  background:#ffffff99 ;
-}
 
 @media screen and (min-width:840px) { 
   .wrapper[nav-menu]{
@@ -655,7 +658,7 @@ img.icon{
   overflow-y: hidden;
   padding: 0px;
   transform: translate(0px, 0px);
-  max-width: 400px;
+  max-width: 500px;
 }
 
 
@@ -664,6 +667,13 @@ img.icon{
 /* ご依頼　テキスト */
 .text[request]{
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+p.text[request]{
+  width: fit-content;
+  display: block;
 }
 
 
@@ -747,13 +757,12 @@ img.icon{
 
 /* カルーセル */
 .swiper{
-  margin: 0 15px;
   width: 100%;
 }
 .swiper img{
   width: 100%;
   height: 40vw;
-  max-height: 500px;
+  max-height: 600px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -786,7 +795,7 @@ img.icon{
   flex-wrap: nowrap;
   height: auto;
   justify-content: center;
-  padding: 1vh 2vw;
+  padding: 1vh 1vw;
   max-width: 100%;
   background: #292c3260;
 }
@@ -870,7 +879,7 @@ footer .container{
 
 @media screen and (max-width:840px) {
   .wrapper[contents]{
-    margin: 120px 20px 50px 20px;
+    margin: 120px 5px 50px 5px;
     min-height: calc(100vh - 290px);
   }
   footer .container{
@@ -995,7 +1004,7 @@ footer .container{
 .tab {
   max-width: 100%;
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
 }
 
 /* タブメニュー */
@@ -1206,7 +1215,7 @@ input[type="radio"]{
 }
 
 .filters label {
-  padding: 0 20px;
+  padding: 4px 20px;
   border-radius: 9999px;
   width: auto;
   min-width: 60px;
@@ -1274,7 +1283,3 @@ input[type="radio"]{
   max-width: 100%;
   justify-content: flex-start;
 }
-
-
-/* Light box */
-
