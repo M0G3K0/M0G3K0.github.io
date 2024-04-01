@@ -28,6 +28,9 @@
 
   <!-- photoswipe -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css" rel="stylesheet">
+
+  <!-- youtube facade -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.css"/>
   
   <!-- css -->
   <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
@@ -165,7 +168,7 @@
       
       <div works  data-category="Movie" class="item">
         <div works class="container youtube">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/vnPYA9OejwE?si=kwV_BVwxeuCA641Q&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <lite-youtube videoid="vnPYA9OejwE" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
           <div works class="caption-container">
             <p class="tag">movie</p>
             <p works class="caption">ナポリの男たち5周年</p>
@@ -204,7 +207,7 @@
       </div>
       <div works  data-category="Movie" class="item">
         <div works class="container youtube">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/3cB3e12_n1o?si=HP9dR2G9yzJUukOr&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <lite-youtube videoid="3cB3e12_n1o" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
           <div works class="caption-container">
             <p class="tag">movie</p>
             <p works class="caption">外資系アニバ合作</p>
@@ -234,7 +237,7 @@
 
       <div works  data-category="Movie" class="item">
         <div works class="container youtube">
-          <iframe loading="lazy"  src="https://www.youtube.com/embed/q9XqaENFPHQ?si=4xG4kA_V0TDyJ8A2&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <lite-youtube videoid="q9XqaENFPHQ" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
           <div works class="caption-container">
             <p class="tag">movie</p>
             <p works class="caption">ボクキミ</p>
@@ -264,7 +267,10 @@
     <!-- photoswipe -->
     <script  type='text/javascript' defer src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/umd/photoswipe.umd.min.js"></script>
     <script  type='text/javascript' defer src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/umd/photoswipe-lightbox.umd.min.js"></script>
+    <!-- youtube facade -->
+    <script  type='text/javascript' defer src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.js"></script>
 
+    
     <script  type='text/javascript' defer src="js/script.js"></script>
     
 </body>
