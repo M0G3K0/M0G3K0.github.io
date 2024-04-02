@@ -640,6 +640,7 @@ img.icon{
 .dot:before{
   content: '＊';
   font-weight: 700;
+  font-size: .85em;
 }
 
 /* ご依頼 画像 */
@@ -813,7 +814,7 @@ p.text[request]{
 
 .caption[sample]{
   color: #FFFFFF;
-  font-weight: 300;
+  font-weight: 400;
   height: auto;
   letter-spacing: 0.05em;
   line-height: 1.5;
